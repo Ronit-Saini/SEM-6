@@ -3,7 +3,7 @@ import socket
 from _thread import *
 ServerSocket = socket.socket()
 host = '127.0.0.1'
-port = 11596
+port = 11526
 
 ThreadCount = 0
 try:
