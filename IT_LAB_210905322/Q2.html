@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Promotion Eligibility Checker</title>
+</head>
+<body>
+	<h2>Promotion Eligibility Checker</h2>
+
+	<form id="promotionForm">
+		<label for="employeeId">Employee ID:</label>
+		<select id="employeeId">
+			<option value="emp001">Employee 001</option>
+			<option value="emp002">Employee 002</option>
+			<option value="emp003">Employee 003</option>
+			<!-- Add more options as needed -->
+		</select><br><br>
+
+		<label for="joinDate">Date of Joining:</label>
+		<input type="date" id="joinDate"><br><br>
+
+		<button type="button" onclick="checkPromotionEligibility()">Am I Eligible for Promotion</button><br><br>
+
+		<label id="promotionResult"></label>
+	</form>
+
+	<script>
+    function checkPromotionEligibility() {
+      var selectedEmployeeId = document.getElementById("employeeId").value;
+      var joinDate = new Date(document.getElementById("joinDate").value);
+      var currentDate = new Date();
+
+      // Calculate years of experience
+      var yearsOfExperience = currentDate.getFullYear() - joinDate.getFullYear();
+      if (currentDate.getMonth() < joinDate.getMonth() || (currentDate.getMonth() === joinDate.getMonth() && currentDate.getDate() < joinDate.getDate())) {
+        yearsOfExperience--;
+      }
+
+      // Check if eligible for promotion
+      if (yearsOfExperience > 5) {
+        document.getElementById("promotionResult").innerText = "YES";
+      } else {
+        document.getElementById("promotionResult").innerText = "NO";
+      }
+    }
+	</script>
+</body>
+</html>

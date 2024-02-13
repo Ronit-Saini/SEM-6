@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Student Form</title>
+
+</head>
+<body>
+	<script type="text/javascript">
+		function
+			myfunc() {
+			var n1 = document.getElementById("name").value;
+			var n2 = document.getElementById("dob").value;
+			var n3 = document.getElementById("address").value;
+			var n4 = document.getElementById("phone").value;
+			var n5 = document.getElementById("email").value;
+			var n6 = document.getElementById("physics").value;
+			var n7 = document.getElementById("english").value;
+			var n8 = document.getElementById("chem").value;
+			var n9 = (parseInt(n6) + parseInt(n7) + parseInt(n8)) * 100 / 300;
+			document.getElementById("namep").innerHTML = "Name: " + n1;
+			document.getElementById("dobp").innerHTML = "dob: " + n2;
+			document.getElementById("addressp").innerHTML = "address: " + n3;
+			document.getElementById("phonep").innerHTML = "phone: " + n4;
+			document.getElementById("emailp").innerHTML = "email: " + n5;
+			document.getElementById("physicsp").innerHTML = "physics: " + n6;
+			document.getElementById("englishp").innerHTML = "english: " + n7;
+			document.getElementById("chemp").innerHTML = "chemistry: " + n8;
+			document.getElementById("percent").innerHTML = "percentage: " + n9;
+
+		}
+	</script>
+	Enter name: <input type="text" id="name"><br>
+	Enter date of birth: <input type="text" id="dob"><br>
+	Enter address: <input type="text" id="address"><br>
+	Enter phone number: <input type="text" id="phone"><br>
+	Enter email id: <input type="text" id="email"><br>
+	Enter physics marks: <input type="text" id="physics"><br>
+	Enter  english marks: <input type="text" id="english"><br>
+	Enter chemistry marks: <input type="text" id="chem"><br>
+	<button onclick="myfunc()">Submit</button><br\>
+		<p id="namep"></p>
+		<p id="dobp"></p>
+		<p id="addressp"></p>
+		<p id="phonep"></p>
+		<p id="emailp"></p>
+		<p id="physicsp"></p>
+		<p id="englishp"></p>
+		<p id="chemp"></p>
+		<p id="percent"></p>
+</body>
+</html>
