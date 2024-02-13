@@ -1,0 +1,21 @@
+JQUERY
+BOOTSTRAP
+DJANGO
+marks will be given on this basis
+
+
+april 1st week
+
+
+minimum 3 panel like eg announcemnets,internships,clubs
+
+
+admin can edit all this
+students can add to all this
+
+default login page
+or the login button
+
+
+
+
